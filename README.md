@@ -1,2 +1,2 @@
 # fastperms
-Speeding up permutations testing for genomic enrichment. 
+Speeding up permutation testing for genomic enrichment. 
