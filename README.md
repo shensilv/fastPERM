@@ -1,2 +1,9 @@
-# fastperms
-Speeding up permutation testing for genomic enrichment. 
+# fastPERM
+
+Recent advances in genome sequencing technology have allowed researchers to fully explore the individual genomic mutations that cause disease.  The gold-standard for identifying disease-causing variants is Genome-Wide Association Studies (GWAS), a relatively recent advance in quantitative genetics. In such a study, linear models are used to identify Single Nucleotide Polymorphisms (SNPs) that demonstrate a strong correlation with various phenotypic traits i.e., height, disease etc. Although these studies reveal SNPs that are highly associated with a particular trait I.e., having some diseases, the mere presence of such an SNP in the genome does not guarantee the manifestation of that trait. The sufficient and necessary conditions for a specific phenotype may be the cumulative consequence of multiple SNPs arranged in a particular configuration. In an effort to better understand disease mechanisms driven by aggregate effects of many SNPs, we can investigate whether disease-causing or trait-causing SNPs are significantly over-represented or under-represented in certain genome annotations.
+
+The underlying genomic structure makes a test for over-representation difficult, as the number of SNPs in an annotation does not follow any known probability distribution. The solution is to create our own empirical distribution of the number of trait-associated SNPs located in genome annotation, by using permutation testing. During random permutations, the positional information of SNPs is preserved. This ensures that the original spatial relationships within the genetic sequence are maintained.
+
+Owing to the vast number of SNPs, conducting permutation tests can result in significant computational time consumption. The objective of this project is to optimize, including parallelization, the permutation test process, enabling quicker execution and obtaining results faster within High-Performance Computing (HPC) systems. Additionally, the project aims to provide biologists with a user-friendly Python API, facilitating easy and efficient utilization of the tool for the analysis of SNP arrangements.
+
+Key words: Genome-Wide Association Studies(GWAS), Permutation test, MPI, OpenMP
